@@ -71,7 +71,6 @@ class StoreDataView(APIView):
         for key in data:
             try:
                 pk = Store.objects.filter(key=key).values_list('id',flat = True)[0]
-                print("aaaaaaaaaaaaaaaaa = ",pk)
                 store = self.get_object(pk)
                 temp_data = {'key':key, 'value':data[key],'posting_date' : datetime.now()}
                 serializer = StoreDataViewSerializer(store, data=temp_data)
