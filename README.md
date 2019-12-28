@@ -16,6 +16,6 @@ PATCH/ http://127.0.0.1:8000/api/v1/values
 > Reset TTL on every PATCH and GET Request.
 > Write unit test case to see the API is working perfectly or not.
 ```
-For TTL i have stored the posting Date Time of key value in POST request. When user will send GET or PATCH request 
-previous date time will replaced by present date time  of those key value and BackgroundScheduler will 
-check the time of key value exceed five minutes or not.
+For TTL automatically stored the posting date time when key value will send in POST request.
+When user will send GET or PATCH request previous date time will replaced by present date time  of those key 
+value and BackgroundScheduler will check the time of key value exceed five minutes or not.
